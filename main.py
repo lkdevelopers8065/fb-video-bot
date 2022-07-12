@@ -30,7 +30,7 @@ def VideoUrl(url):
 if __name__ == "__main__":
 
 
-    bot_token = '<5571337675:AAEbX5Hvw2n1yvbB9F0_wUIlMnkqWlt9-lA>'
+    bot_token = '<@BOT_TOKEN>'
     bot = telebot.TeleBot(token=bot_token)
 
 
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     def send_welcome(message):
         bot.reply_to(message, 'Welcome to LKDevelopers')
 
-    @bot.message_handler(func=lambda msg: msg.text is not None and '@lkdev_fb_bot' in msg.text)
+    @bot.message_handler(func=lambda msg: msg.text is not None and '@BotName' in msg.text)
     def at_answer(message):
         fburl = message.text.split()[1]
         if 'http' not in fburl:
